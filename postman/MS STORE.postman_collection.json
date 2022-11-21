@@ -1,0 +1,584 @@
+{
+	"info": {
+		"_postman_id": "c464e261-32dd-4184-858c-0c42deee2ec3",
+		"name": "MS STORE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23040083"
+	},
+	"item": [
+		{
+			"name": "CRUD STORE",
+			"item": [
+				{
+					"name": "POST STORE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"camilos store\",\r\n    \"cnpj\": \"123123123123\",\r\n    \"deliveryMan\": null,\r\n    \"products\": [],\r\n    \"orders\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/store",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL STORES",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/store",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET STORE BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/store/636e7cc11e594c3b2a61276b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"store",
+								"636e7cc11e594c3b2a61276b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE STORE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"636e7cc11e594c3b2a61276b\",\r\n    \"name\": \"camilos store\",\r\n    \"cnpj\": \"123123123123\",\r\n    \"deliveryMan\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/store/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"store",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE STORE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/store/delete/636e7cc11e594c3b2a61276b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"store",
+								"delete",
+								"636e7cc11e594c3b2a61276b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD PRODUCTS",
+			"item": [
+				{
+					"name": "POST PRODUCTS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"picanha angus\",\r\n    \"price\": 150.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/product/store/636e7cc11e594c3b2a61276b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"product",
+								"store",
+								"636e7cc11e594c3b2a61276b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PRODUCTS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PRODUCT BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/product/636e7d281e594c3b2a61276e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"product",
+								"636e7d281e594c3b2a61276e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PRODUCT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"636e7d281e594c3b2a61276e\",\r\n    \"name\": \"picanha nobre\",\r\n    \"price\": 200.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/product/update/store/636e7cc11e594c3b2a61276b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"product",
+								"update",
+								"store",
+								"636e7cc11e594c3b2a61276b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PRODUCT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/ms-store/product/63743650512a0b0143280e05/delete/store/63743650512a0b0143280e05",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"product",
+								"63743650512a0b0143280e05",
+								"delete",
+								"store",
+								"63743650512a0b0143280e05"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD ORDERS",
+			"item": [
+				{
+					"name": "GET ALL ORDERS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ORDER BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/order/636e7e661e594c3b2a612770",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"order",
+								"636e7e661e594c3b2a612770"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL ORDERS FROM AN STORE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/order/store/636e7e661e594c3b2a612770",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"order",
+								"store",
+								"636e7e661e594c3b2a612770"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ORDER",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"636e7e661e594c3b2a612770\",\r\n    \"products\": [\r\n        {\r\n            \"id\": \"636e7d281e594c3b2a61276e\",\r\n            \"name\": \"picanha nobre\",\r\n            \"price\": 300.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/order/update/store/636e7e661e594c3b2a612770",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"order",
+								"update",
+								"store",
+								"636e7e661e594c3b2a612770"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ORDER SHIPPED",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"636e7e661e594c3b2a612770\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/order/update/status/store/636e7cc11e594c3b2a61276b/shipped",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"order",
+								"update",
+								"status",
+								"store",
+								"636e7cc11e594c3b2a61276b",
+								"shipped"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE ORDER DELIVERED",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"636e7e661e594c3b2a612770\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/order/update/status/store/636e7cc11e594c3b2a61276b/delivered",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"order",
+								"update",
+								"status",
+								"store",
+								"636e7cc11e594c3b2a61276b",
+								"delivered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ORDER",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/ms-store/order/delete/636e7e661e594c3b2a612770",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"order",
+								"delete",
+								"636e7e661e594c3b2a612770"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST ORDER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2022-11-08T04:01:55.672Z\",\r\n    \"status\": null,\r\n    \"user\": {\r\n        \"id\": \"123\",\r\n        \"name\": \"Arthur\",\r\n        \"cpf\": \"654987654214\",\r\n        \"address\": [\r\n            \"Rua Machado Dias, 195\"\r\n        ],\r\n        \"orders\": null\r\n    },\r\n    \"products\": [\r\n        {\r\n            \"id\": \"636e7d281e594c3b2a61276e\",\r\n            \"name\": \"picanha nobre\",\r\n            \"price\": 300.0\r\n        },\r\n        {\r\n            \"id\": \"636e7d421e594c3b2a61276f\",\r\n            \"name\": \"picanha argentina\",\r\n            \"price\": 100.0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/ms-store/order/store/636e7cc11e594c3b2a61276b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"ms-store",
+								"order",
+								"store",
+								"636e7cc11e594c3b2a61276b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

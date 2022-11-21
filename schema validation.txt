@@ -1,0 +1,6 @@
+use logs
+db.createCollection("log", { capped: true, size: 1024, max: 50})
+
+https://www.mongodb.com/docs/manual/core/schema-validation/specify-json-schema/
+
+https://classroom.google.com/w/NTM3NjIzMjA5NjYy/t/all

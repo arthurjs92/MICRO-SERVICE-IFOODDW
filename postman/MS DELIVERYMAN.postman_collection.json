@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "1aa9088f-11e9-4cf6-98b0-0148c4f19b6b",
+		"name": "MS DELIVERYMAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23040083"
+	},
+	"item": [
+		{
+			"name": "POST DELIVERYMAN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Arthur Santos\",\r\n    \"cpf\": \"32165498754\",\r\n    \"plate\": \"hgn3256\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/deliveryman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"deliveryman"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL DELIVERYMAN",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/deliveryman",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"deliveryman"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET DELIVERYMAN BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/deliveryman/636eaffdbf9d605df0bf62eb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"deliveryman",
+						"636eaffdbf9d605df0bf62eb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE DELIVERYMAN",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"636eaffdbf9d605df0bf62eb\",\r\n    \"name\": \"Arthur Ferreira\",\r\n    \"cpf\": \"32165498754\",\r\n    \"plate\": \"hgn3256\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/deliveryman/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"deliveryman",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE DELIVERYMAN",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/deliveryman/delete/636eaffdbf9d605df0bf62eb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"deliveryman",
+						"delete",
+						"636eaffdbf9d605df0bf62eb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
