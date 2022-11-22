@@ -2,8 +2,9 @@ package com.ifooddw.log.controller;
 
 import com.ifooddw.log.model.Log;
 
-import com.ifooddw.log.service.logimpl.LogImpl;
 import com.ifooddw.log.service.LogServiceImpl;
+import com.ifooddw.log.service.logimpl.LogImpl;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,33 +15,33 @@ import java.util.List;
 public class LogController implements LogImpl {
 
     @Autowired
-    private LogServiceImpl logServiceImpl;
+    private LogServiceImpl logService;
 
     @Override
     @PostMapping
     public Log createLog(Log log) {
-        return logServiceImpl.createLog(log);
+        return logService.createLog(log);
     }
 
     @Override
     @GetMapping("/{id}")
     public Log findLogById(@PathVariable String id) {
-        return logServiceImpl.findLogById(id);
+        return logService.findLogById(id);
     }
 
     @Override
     @GetMapping
     public List<Log> findAllLogs() {
-        return logServiceImpl.findAllLogs();
+        return logService.findAllLogs();
     }
 
     @Override
     public Log updateLog(Log log) {
-        return logServiceImpl.updateLog(log);
+        return logService.updateLog(log);
     }
 
     @Override
     public void deleteOneLog(String id) {
-        logServiceImpl.deleteOneLog(id);
+        logService.deleteOneLog(id);
     }
 }

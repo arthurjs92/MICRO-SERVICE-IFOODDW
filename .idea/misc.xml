@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/ms-client/pom.xml" />
         <option value="$PROJECT_DIR$/ms-store/pom.xml" />
         <option value="$PROJECT_DIR$/ms-log/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server/pom.xml" />
       </list>
     </option>
   </component>

@@ -7,6 +7,8 @@ import org.springframework.data.mongodb.core.CollectionOptions;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Id;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 @Data
@@ -14,11 +16,11 @@ import java.util.Date;
 @AllArgsConstructor
 @Document("log")
 public class Log<T> {
-    CollectionOptions options = CollectionOptions.empty().capped().size(1024).maxDocuments(50);
+//    CollectionOptions options = CollectionOptions.empty().capped().size(1024).maxDocuments(50);
     @Id
     private String id;
     private Action action = Action.NONE;
-    private Date date;
+    private Date date = new Date();
     private Object object = new Object();
 
     public Log(T object) {

@@ -12,7 +12,7 @@ import java.util.Date;
 public class Log<T> {
 
     private Action action = Action.NONE;
-    private Date date;
+    private Date date = new Date();
     private Object object = new Object();
 
     public Log(T object) {
