@@ -2,16 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="config-server" />
         <module name="mscliente" />
-        <module name="msentregador" />
+        <module name="config-server" />
         <module name="msloja" />
-        <module name="ms-deliveryman" />
+        <module name="msentregador" />
         <module name="mslog" />
         <module name="eureka-server" />
         <module name="gateway" />
@@ -21,10 +19,6 @@
       <module name="config-server" target="17" />
       <module name="eureka-server" target="17" />
       <module name="gateway" target="17" />
-      <module name="ms-client" target="17" />
-      <module name="ms-deliveryman" target="17" />
-      <module name="ms-log" target="17" />
-      <module name="ms-store" target="17" />
       <module name="mscliente" target="17" />
       <module name="msentregador" target="17" />
       <module name="mslog" target="17" />
@@ -36,10 +30,6 @@
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
-      <module name="ms-client" options="-parameters" />
-      <module name="ms-deliveryman" options="-parameters" />
-      <module name="ms-log" options="-parameters" />
-      <module name="ms-store" options="-parameters" />
       <module name="mscliente" options="-parameters" />
       <module name="msentregador" options="-parameters" />
       <module name="mslog" options="-parameters" />
