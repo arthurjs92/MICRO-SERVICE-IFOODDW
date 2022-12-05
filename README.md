@@ -6,6 +6,4 @@ Este projeto é um trabalho para exercitar os conhecimentos adquiridos nas aulas
 
 Implementamos os seguintes micro serviços: Log, Client, Store e DeliveryMan. E neles utilizamos o Netflix Eureka Discovery Client, RabbitMQ para que um possa enviar dados para o outro e assim ninguem se sinta sozinho, utilizamos também o OpenFeign para acessar endpoints de outro micro serviço, além das bibliotecas mais connhecidas como JPA e Lombok. Para a persistência de dados utilizamos o MongoDB e como SGBD utilizamos o MongoDBCompass e Mongo Shell. Segue o diagrama de micro serviço.
 
-
-
-
+![image](https://user-images.githubusercontent.com/88942381/205765667-2596f72a-c2f7-46bb-bd66-7b66e1712bb4.png)
