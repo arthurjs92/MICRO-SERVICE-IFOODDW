@@ -44,6 +44,7 @@ public class OrderService implements OrderImpl {
     public Order createOrder(OrderDTO orderDTO) {
         var status = Status.NEWORDER;
         Order order = new Order(orderDTO);
+        order.setAddress(orderDTO.getAddress());
         order.calcTotalPrice();
         order.setStatus(status.getDescription());
         orderRepository.save(order);

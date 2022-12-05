@@ -16,6 +16,7 @@ public class OrderDTO {
 
     private String idStore;
     private User user;
+    private String address;
     private List<Product> products = new ArrayList<>();
 
 }

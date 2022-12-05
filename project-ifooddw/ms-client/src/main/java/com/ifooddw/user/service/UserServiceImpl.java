@@ -3,6 +3,7 @@ package com.ifooddw.user.service;
 import com.ifooddw.user.dto.OrderDTO;
 import com.ifooddw.user.dto.UserDTO;
 import com.ifooddw.user.model.Order;
+import com.ifooddw.user.model.Product;
 import com.ifooddw.user.model.User;
 import com.ifooddw.user.openfeign.OrderFeign;
 import com.ifooddw.user.repository.UserRepository;
@@ -61,7 +62,7 @@ public class UserServiceImpl implements UserService {
     public User userCreateOrder(String id, String idStore, Order order) {
         if (id != null && !id.isEmpty()) {
             if (idStore != null && !idStore.isEmpty()) {
-                var userOrder = orderFeign.createOrderWithStore(new OrderDTO(idStore, order.getProducts()));
+                var userOrder = orderFeign.createOrderWithStore(new OrderDTO(idStore, order.getAddress(), order.getProducts()));
                 addOrderToUser(id, userOrder);
             }
         }
@@ -83,4 +84,8 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    public List<Product> findProductsFromStore(String id) {
+        var store = orderFeign.findStoreById(id).get();
+        return store.getProducts();
+    }
 }

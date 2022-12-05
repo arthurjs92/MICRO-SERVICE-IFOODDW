@@ -44,4 +44,19 @@ public class LogController implements LogImpl {
     public void deleteOneLog(String id) {
         logService.deleteOneLog(id);
     }
+
+    @GetMapping("/action")
+    public Log fingLogByAction(@RequestBody String action) {
+        return logService.fingLogByAction(action);
+    }
+
+    @GetMapping("/date")
+    public Log findLogByDateOfRegistry(@RequestBody String date) {
+        return logService.findLogByDateOfRegistry(date);
+    }
+
+    @GetMapping("/user")
+    public Log findLogByUser(@RequestBody String name) {
+        return logService.findLogByUser(name);
+    }
 }

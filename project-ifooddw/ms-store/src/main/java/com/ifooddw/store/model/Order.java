@@ -21,8 +21,9 @@ public class Order {
     @Id
     private String id;
     private Date date = new Date();
-    private Double totalPrice = 0.00;
+    private Double totalPrice;
     private String status;
+    private String address;
 
     @DBRef
     private List<Product> products = new ArrayList<>();

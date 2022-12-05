@@ -2,6 +2,7 @@ package com.ifooddw.user.controller;
 
 import com.ifooddw.user.dto.UserDTO;
 import com.ifooddw.user.model.Order;
+import com.ifooddw.user.model.Product;
 import com.ifooddw.user.model.User;
 import com.ifooddw.user.service.UserServiceImpl;
 import com.ifooddw.user.service.impl.UserService;
@@ -58,5 +59,10 @@ public class UserController implements UserService {
     @GetMapping("/{id}/orders")
     public List<Order> findAllUsersOrders(@RequestBody User user){
         return userServiceImpl.findAllUsersOrders(user);
+    }
+
+    @GetMapping("/visualize/products/store/{id}")
+    public List<Product> visualizeProductsFromSelectedStore(@PathVariable String id){
+        return userServiceImpl.findProductsFromStore(id);
     }
 }

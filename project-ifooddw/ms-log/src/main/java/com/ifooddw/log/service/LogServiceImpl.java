@@ -4,10 +4,7 @@ import com.ifooddw.log.model.Log;
 import com.ifooddw.log.repository.LogRepository;
 import com.ifooddw.log.service.logimpl.LogImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.CollectionOptions;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
 
 import java.util.List;
 
@@ -34,7 +31,7 @@ public class LogServiceImpl implements LogImpl {
 
     @Override
     public Log updateLog(Log log) {
-        if(log.getId()!=null && !log.getId().isEmpty()){
+        if (log.getId() != null && !log.getId().isEmpty()) {
             return logRepository.save(log);
         }
         return log;
@@ -43,7 +40,7 @@ public class LogServiceImpl implements LogImpl {
     @Override
     public void deleteOneLog(String id) {
         var log = logRepository.findById(id).get();
-        if(log.getId()!=null && !log.getId().isEmpty()){
+        if (log.getId() != null && !log.getId().isEmpty()) {
             logRepository.delete(log);
         }
     }
@@ -54,4 +51,16 @@ public class LogServiceImpl implements LogImpl {
 //            mongoTemplate.createCollection(collection, options);
 //        }
 //    }
+
+    public Log fingLogByAction(String action) {
+        return logRepository.findLogByAction(action);
+    }
+
+    public Log findLogByDateOfRegistry(String date) {
+        return logRepository.findLogByDateOfRegistry(date);
+    }
+
+    public Log findLogByUser(String name) {
+        return logRepository.findLogByUser(name);
+    }
 }
